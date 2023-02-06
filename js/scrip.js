@@ -63,6 +63,17 @@ document.querySelector("#worker_form").addEventListener("submit", (e) => {
   }
 });
 
+// Delete Data
+
+document.querySelector("#worker-list").addEventListener("click", (e) => {
+    target = e.target;
+    if(target.classList.contains("edit")){
+        selectedRow = target.parentElement.parentElement;
+        document.querySelector("#firstName").value = selectedRow.children[0].textContent
+        document.querySelector("#lastName").value = selectedRow.children[1].textContent
+        document.querySelector("#RollNo").value = selectedRow.children[2].textContent
+    }
+})
 
 
 document.querySelector("#worker-list").addEventListener("click", (e) => {
