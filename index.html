@@ -18,23 +18,23 @@
       </div>
       <div class="main row justify-content-center">
         <form action="" id="student_form" class="row justify-content-center mb-4" autocomplete="off">
-           <div class="col-10 mb-3">
+           <div class="col-10 col-md-8 mb-3">
               <label for="firntName">Seu nome</label>
               <input type="text" class="form-control" id="firntName" placeholder="Escriva Seu nome"> 
            </div>
-           <div class="col-10 mb-3">
+           <div class="col-10 col-md-8 mb-3">
             <label for="lastName">Seu Apelido</label>
             <input type="text" class="form-control" id="lastName" placeholder="Escriva Seu Apelid"> 
          </div>
-         <div class="col-10 mb-3">
+         <div class="col-10 col-md-8 mb-3">
             <label for="RollNo">Sua Função</label>
             <input type="text" class="form-control" id="RollNo" placeholder="Escriva Sua Função"> 
          </div>
-         <div class="col-10">
+         <div class="col-10 col-md-8 ">
             <input type="submit" value="submit" class="btn btn-success add-btn">
          </div>
         </form> 
-        <div class="col-12 mt-5">
+        <div class="col-12 col-md-10 mt-5">
             <table class="table table-striped table-dark">
                 <thead>
                     <tr>
@@ -45,7 +45,7 @@
                     </tr>
                 </thead>
 
-                <tbody class="student-list">
+                <tbody id="worker-list">
                     <tr>
                         <td>Jhon</td>
                         <td>Gil</td>
@@ -67,7 +67,7 @@
 
 
 
-
+        <script src="js/scrip.js"></script>
 
     <!-- lick  Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
