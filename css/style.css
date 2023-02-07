@@ -1,0 +1,15 @@
+@import url(../js/scrip.js);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image:  url("../img/teclado.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
