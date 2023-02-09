@@ -23,7 +23,7 @@ function ClearFields() {
 
 // Add Data
 
-document.querySelector("#worker_form").addEventListener("submit", (e) => {
+document.querySelector("#worker_form").addEventListener("click", (e) => {
   e.preventDefault();
 
   //Get Form Values
@@ -46,7 +46,7 @@ document.querySelector("#worker_form").addEventListener("submit", (e) => {
        <td>${RollNo}</td>
        <td>
         <a href="#" class="btn btn-warning btn-sm edit">Edit</a>
-       <a href="#" class="btn btn-danger btn-sm delete">Delete</a>    
+        <a href="#" class="btn btn-danger btn-sm delete">Delete</a>    
        <td>
        `;
       list.appendChild(row);

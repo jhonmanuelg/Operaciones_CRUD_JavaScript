@@ -7,9 +7,20 @@
 }
 
 body{
+    height: 130%;
     background-image:  url("../img/teclado.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+}
+thead .botn_td{
+    width: 4rem;
 }
 
+@media screen and (max-width: 412px) {
+    
+    thead .botn_td{
+        margin-bottom:  0.8rem;
+    }
+}
 
