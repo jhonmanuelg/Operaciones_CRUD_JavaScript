@@ -1,85 +1,92 @@
-var selectedRow = null;
+var selecteRow = null;
 
-// show alerts
+// show Alerts
 
-function showAlert(message, classNome) {
+function shoWAlert(message, className) {
   const div = document.createElement("div");
-  div.className = `alert alert-${classNome}`;
+  div.className = `alert alert-${className}`;
 
   div.appendChild(document.createTextNode(message));
+
   const container = document.querySelector(".container");
   const main = document.querySelector(".main");
   container.insertBefore(div, main);
-  setInterval(() => document.querySelector(".alert").remove(), 3000);
+
+  setTimeout(() => document.querySelector(".alert").remove(), 3000);
 }
 
 // Clear All Fields
-
-function ClearFields() {
+function clearFields() {
   document.querySelector("#firstName").value = "";
   document.querySelector("#lastName").value = "";
-  document.querySelector("#RollNo").value = "";
+  document.querySelector("#rollNo").value = "";
 }
 
-// Add Data
-
-document.querySelector("#worker_form").addEventListener("click", (e) => {
+// add data
+document.querySelector("#worker_form").addEventListener("submit", (e) => {
   e.preventDefault();
 
-  //Get Form Values
+  //get form calues
 
   const firstName = document.querySelector("#firstName").value;
   const lastName = document.querySelector("#lastName").value;
-  const RollNo = document.querySelector("#RollNo").value;
+  const rollNo = document.querySelector("#rollNo").value;
 
-  // Validate
-
-  if (firstName == "" || lastName == "" || RollNo == "") {
-    showAlert("Please fill in all fields", "danger");
+  //validate
+  if (firstName == "" || lastName == "" || rollNo == "") {
+    shoWAlert(" Valide seu datos", "danger");
   } else {
-    if (selectedRow == null) {
+    if (selecteRow == null) {
       const list = document.querySelector("#worker-list");
       const row = document.createElement("tr");
       row.innerHTML = `
-       <td>${firstName}</td>
-       <td>${lastName}</td>
-       <td>${RollNo}</td>
-       <td>
-        <a href="#" class="btn btn-warning btn-sm edit">Edit</a>
-        <a href="#" class="btn btn-danger btn-sm delete">Delete</a>    
-       <td>
-       `;
+      <tr>
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>${rollNo}</td>
+        <td>
+          <a href="#" class="botn_td btn btn-warning btn-sm edit" >Edit</a>
+          <a href="#" class="botn_td btn btn-danger btn-sm btn-smdelete delete" >Delete</a>
+        </td>
+        </tr>
+      `;
+
       list.appendChild(row);
-      selectedRow = null;
-      showAlert("worker Added", "success");
-    } else {
-      selectedRow.children[0].textContent = firstName;
-      selectedRow.children[1].textContent = lastName;
-      selectedRow.children[2].textContent = RollNo;
-      selectedRow = null;
-      showAlert("worker Info Edited", "info");
+      selecteRow = null;
+      shoWAlert("Elento agregado", "success")
     }
-    ClearFields();
+    else{
+      selecteRow.children[0].textContent = firstName;
+      selecteRow.children[1].textContent = lastName;
+      selecteRow.children[2].textContent = rollNo;
+      selecteRow= null;
+      shoWAlert("Informação editada", "info");
+    }
+
+    clearFields();
   }
 });
 
-// Delete Data
-
-document.querySelector("#worker-list").addEventListener("click", (e) => {
-    target = e.target;
-    if(target.classList.contains("edit")){
-        selectedRow = target.parentElement.parentElement;
-        document.querySelector("#firstName").value = selectedRow.children[0].textContent
-        document.querySelector("#lastName").value = selectedRow.children[1].textContent
-        document.querySelector("#RollNo").value = selectedRow.children[2].textContent
-    }
+// Edit data
+document.querySelector("#worker-list").addEventListener("click", (e) =>{
+  target = e.target;
+  if (target.classList.contains("edit")){
+    selecteRow = target.parentElement.parentElement;
+    document.querySelector("#firstName").value = selecteRow.children[0].textContent;
+    document.querySelector("#lastName").value = selecteRow.children[1].textContent;
+    document.querySelector("#rollNo").value = selecteRow.children[2].textContent;
+  }
 })
 
 
+
+
+//Delete data
 document.querySelector("#worker-list").addEventListener("click", (e) => {
+  // mira aqui
   target = e.target;
   if (target.classList.contains("delete")) {
     target.parentElement.parentElement.remove();
-    showAlert("worker data deletad", "danger");
+    shoWAlert("Dotos Eliminado", "danger");
   }
 });

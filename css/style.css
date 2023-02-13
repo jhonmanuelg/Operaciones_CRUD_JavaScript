@@ -6,21 +6,37 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 130%;
-    background-image:  url("../img/teclado.jpg");
+    background-image: url("../img/teclado.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
-thead .botn_td{
-    width: 4rem;
-}
 
-@media screen and (max-width: 412px) {
-    
-    thead .botn_td{
-        margin-bottom:  0.8rem;
+@media (max-width: 672px) {
+    .thead_tr {
+        display: none;
+    }
+
+    .thead__td tr {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .thead__td .btn {
+        width: 20% !important;
+        display: flexbox;
+        margin-left: 4rem;
+
     }
 }
 
+@media (max-width: 412px) {
+
+    thead .botn_td {
+        margin-bottom: 0.8rem;
+    }
+}
