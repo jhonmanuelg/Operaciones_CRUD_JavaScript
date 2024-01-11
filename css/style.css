@@ -1,60 +1,63 @@
 @import url(../js/scrip.js);
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
-    height: 130%;
-    background-image: linear-gradient(#0001, #0000), url("../img/paisaje-wallpaper.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  height: 130%;
+  background-image: linear-gradient(#0001, #0000),
+    url("../img/paisaje-wallpaper.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.container{
-   width: 100%;
-   height: 86vh;
-   padding: 12px;
+.container {
+  width: 100%;
+  height: 86vh;
+  padding: 12px;
 }
 
-.text_center h1{
-    color: black;
-    font-weight: bold;
-margin-top: 20px;
+.text_center h1 {
+  color: black;
+  font-weight: bold;
+  margin-top: 40px;
+  font-size: 2rem;
 }
 
-label{
-    color: black;
-    font-weight: 600;  
+label {
+  color: black;
+  font-weight: 600;
 }
 
+footer{
+    margin-top: 4rem;
+}
 
 @media (max-width: 672px) {
-    .thead_tr {
-        display: none;
-    }
+  .thead_tr {
+    display: none;
+  }
 
-    .thead__td tr {
-        margin-top: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+  .thead__td tr {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .thead__td .btn {
-        width: 20% !important;
-        display: flexbox;
-        margin-left: 4rem;
-
-    }
+  .thead__td .btn {
+    width: 20% !important;
+    display: flexbox;
+    margin-left: 4rem;
+  }
 }
 
 @media (max-width: 412px) {
-
-    thead .botn_td {
-        margin-bottom: 0.8rem;
-    }
+  thead .botn_td {
+    margin-bottom: 0.8rem;
+  }
 }
