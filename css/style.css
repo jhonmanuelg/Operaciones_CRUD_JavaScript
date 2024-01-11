@@ -23,7 +23,7 @@ body {
 .text_center h1{
     color: black;
     font-weight: bold;
-
+margin-top: 20px;
 }
 
 label{
