@@ -8,11 +8,29 @@
 
 body {
     height: 130%;
-    background-image: url("../img/teclado.jpg");
+    background-image: linear-gradient(#0001, #0000), url("../img/paisaje-wallpaper.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
+
+.container{
+   width: 100%;
+   height: 86vh;
+   padding: 12px;
+}
+
+.text_center h1{
+    color: black;
+    font-weight: bold;
+
+}
+
+label{
+    color: black;
+    font-weight: 600;  
+}
+
 
 @media (max-width: 672px) {
     .thead_tr {
